@@ -10,7 +10,6 @@
           <div>
             {% if user.id == article.author %}
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
             <ul class="dropdown-menu">
               <li>
                 <a href="/delete/{{article.id}}" class="dropdown-item" style="color:#ffffff; background-color: #5280c1;">DELETE</a>
@@ -19,7 +18,7 @@
           </div>
 
 																			<div>
-																						<a href="/edit/{{article.id}}" class="dropdown-item"
+																						<a href="/edit/{{article.id}}" class="btn btn-primary"
 																							style="color:#ffffff; background-color: #5280c1;">EDIT</a>
 																					</li>
 																				</ul>
@@ -45,11 +44,9 @@
     <br>
     {% block footer %}
     <div align="center">
-      <a href="/publish"
-        ><button type="button" class="btn btn-primary btn-lg">
-          CREATE A POST
-        </button></a
-      >
+      
     </div>
+				<a class="btn btn-primary" href="/publish">CREATE A POST</a>
+
     {% endblock %} {% endblock %}
     

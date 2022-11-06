@@ -31,7 +31,7 @@ def publish():
 	return render_template('publish.html')
 
 
-@aven.route("/edit/<article_id>", methods = ['GET'])
+@aven.route("/edit/<article_id>", methods = ['GET', 'POST'])
 @login_required
 def edit(article_id):
 	article = Article.query.filter_by(id = article_id).first()
@@ -48,7 +48,7 @@ def edit(article_id):
 			article.bodytext = bodytext
 			db.session.commit()
 			flash('You successfully edited this article', category ='success')
-		return redirect(url_for('aven.index'))
+		return redirect(url_for('index'))
 	return render_template('edit.html', article = article)
 
 
@@ -65,7 +65,7 @@ def delete(article_id):
 		db.session.delete(article)
 		db.session.commit()
 		flash('You have deleted this article', category = 'success')
-	return redirect(url_for(aven.index))
+	return redirect(url_for('index'))
 
 #about route displays info about the page
 @aven.route('/about.html')
