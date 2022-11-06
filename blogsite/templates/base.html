@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<title>Blog</title>
+</head>
+<body>
+
+	<nav class="navbar">
+	<h1 class="logo">blog</h1>
+	<ul class="nav-link">
+
+	{% if current_user.is_authenticated %}
+		<li class="active"><a href="{{url_for('index')}}">Home</a></li>
+		<li><a href="{{url_for('publish')}}">Publish</a></li>
+		<li><a href="{{url_for('about')}}">About</a></li>
+		<li><a href="{{url_for('auth.contact')}}">Contact</a></li>
+	<li><a id="logout" href="{{url_for('auth.logout')}}">Logout</a><li>
+
+		{% else %}
+
+		<li class="active"><a href="{{url_for('index')}}">Home</a></li>
+
+		<li><a href="{{url_for('about')}}">About</a></li>
+	
+		<li><a href="{{url_for('auth.contact')}}">Contact</a></li>
+		<li><a href="{{url_for('auth.register')}}"></a></li>	
+		<li><a id="login" href="{{url_for('auth.login')}}">Login</a>
+		<li>
+		
+
+	{% endif %}
+
+	</ul>
+	</nav>
+
+		<header>
+			<div class="header-content">
+			</div>
+		</header>
+
+	<main>
+		<div class="container">
+
+							{% with errors = get_flashed_messages(category_filter=["error"]) %}
+							{% if errors %}
+							<div id="failure" class="alert alert-danger alert-dismissible fade show" role="alert" data-bs-dismiss="alert"
+								align="center">
+								{{ messages }}
+								{% for message in errors %}
+								{{ message }}
+								{% endfor %}
+							</div>
+							{% endif %}
+							{% endwith %}
+							
+							<!-- alerts for success -->
+							{% with success = get_flashed_messages(category_filter=["success"]) %}
+							{% if success %}
+							<div class="alert alert-success alert-dismissible fade show" role="alert" data-bs-dismiss="alert" align="center">
+								{{ messages }}
+								{% for message in success %}
+								{{ message }}
+								{% endfor %}
+							</div>
+							{% endif %}
+							{% endwith %}
+
+			{% block content %}
+			{% endblock content %}
+		</div>
+	</main>
+
+
+</body>
+</html>
+
+
+
+
+
