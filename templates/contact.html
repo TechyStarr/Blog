@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title%} Login {% endblock %}
+{% block content %}
+
+
+<div>
+ <div class="reg"></div>
+ <h1 class="reg" >Contact Me</h1>
+</div>
+
+<form method="POST">
+ <div>
+  <label for="name">Name</label>
+ </div>
+
+ <div>
+  <input type="name" required>
+ </div>
+ <br>
+ <br>
+ <div>
+  <label for="message">Leave a message</label>
+ </div>
+ <textarea name="message" class="txt"></textarea>
+
+ <br>
+ <br>
+ <div>
+  <label for="priority">Priority</label>
+ </div>
+ <div>
+  <select class="txts">
+   <option value="urg">Urgent</option>
+   <option value="imp">Important</option>
+   <option value="cas">Casual</option>
+  </select>
+ </div>
+ <br>
+ <br>
+ <div>
+  <button>Submit</button>
+ </div>
+
+</form>
+
+{% endblock content %}
