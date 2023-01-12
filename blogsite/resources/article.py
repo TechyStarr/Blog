@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
-from flask_jwt_extended import jwt_required
 from flask_login import current_user, login_required, current_user
 from blogsite.models import ArticleModel, UserModel, CommentModel
 from db import db
@@ -84,7 +83,7 @@ def delete(article_id):
 
 @article.route("/articles/<username>")
 @login_required
-def posts(username):
+def articles(username):
     user = UserModel.query.filter_by(username=username).first()
 
     if not user:

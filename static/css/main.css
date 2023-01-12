@@ -38,7 +38,15 @@
 .nav-link li {
 	margin: 0 20px;
 	color: rgb(94, 1, 24);
+}
 
+.nav-link a:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-weight: bold;
+	background-color: rgb(185, 3, 49);
+	padding: 8px 20px;
+	border-radius: 10px;
 }
 
 header {
@@ -104,14 +112,14 @@ form input {
 	height: 40px;
 }
 
-a:hover {
+/* a:hover {
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	font-weight: bold;
 	background-color: rgb(185, 3, 49);
 	padding: 8px 20px;
 	border-radius: 10px;
-}
+} */
 
 .username {
 	text-decoration: none;

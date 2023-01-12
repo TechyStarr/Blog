@@ -18,10 +18,10 @@
 				{% if user.id == article.author %}
 					<div class="btn-group">
 					<br>
-					<!-- <a href="/edit/{{article.id}}"><button type="button" class="btn">Edit</button></a>
-					<a href="/delete/{{article.id}}"><button type="button" class="btn">Delete</button></a> -->
-					<a href="/edit/{{article.id}}" role="button" class="btn">Edit</a>
-					<a href="/delete/{{article.id}}" role="button" class="btn">Delete</a>
+					<a href="/edit/{{article.id}}"><button type="button" class="btn">Edit</button></a>
+					<a href="/delete/{{article.id}}"><button type="button" class="btn">Delete</button></a>
+					<!-- <a href="/edit/{{article.id}}" role="button" class="btn">Edit</a>
+					<a href="/delete/{{article.id}}" role="button" class="btn">Delete</a> -->
 					</div>
 				{% endif %}
 
@@ -64,7 +64,7 @@
 				</p>
 				<form class="input-group mb-3" method="POST" action="/create-comment/{{article.id}}">
 					<input type="text" id="text" name="text" class="form-control" />
-					<button type="submit" class="btn btn-primary">Comment</button>
+					<button type="submit" class="btn">Comment</button>
 				</form>
 			</div>
 
@@ -78,19 +78,19 @@
 			
 			{% if current_user.is_authenticated %}
 			<div align="center">
-				<a href="/create-article"><button type="button" class="btn btn-primary btn-lg">
+				<a href="/create-article"><button type="button" class="btn">
 						CREATE A POST
 					</button></a>
 			</div>
 			{% else %}
 			<div align="center">
-				<a href="/create-article"><button type="button" class="btn btn-primary btn-lg">
+				<a href="/create-article"><button type="button" class="button">
 						Register Now
 					</button></a>
 			</div>
 			<br>
 			<div align="center">
-				<a href="/create-article"><button type="button" class="btn btn-primary btn-lg" style="width: 150px; height: 50px;">
+				<a href="/create-article"><button type="button" class="btn" style="width: 150px; height: 50px;">
 						Log In
 					</button></a>
 			</div>

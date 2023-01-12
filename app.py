@@ -1,13 +1,11 @@
-from datetime import timedelta
 from flask import Flask
 from flask_login import LoginManager, login_manager
 from blogsite.models import UserModel, ArticleModel, CommentModel, LikeModel
-from flask_sqlalchemy import SQLAlchemy
 from db import db
 import os
 from blogsite.resources.user import auth as UserBlueprint
 from blogsite.resources.article import article as ArticleBlueprint
-from blogsite.resources.aven import aven as AvenBlueprint
+from blogsite.resources.views import aven as AvenBlueprint
 
 
 
