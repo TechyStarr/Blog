@@ -1,7 +1,7 @@
-# Blog
+# My_Blog
 Altschool second semester project
 
-# About Wallet_Platform
+# About My_Blog
 This project is a blog website that lets users register and sign into their account. It also lets users create blog posts, publish these posts and while authenticated, they can easily edit or delete their posts at any time.
 
 ### Features I Implemented:
@@ -29,6 +29,7 @@ To get a local copy up and running, follow the steps below.
 
 
   `git clone https://github.com/engrmarkk/Wallet_Platform.git`
+  
   
 1. Create a virtual environment
 
@@ -68,7 +69,7 @@ To get a local copy up and running, follow the steps below.
   ### Contact
   Calista Ifenkwe Twitter - twitter.com/_StarrSzn [<i class="fa-brands fa-twitter"></i>]("twitter.com/_StarrSzn")   calistaifenkwe@gmail.com
   
-  Project link: [blog](https://github.com/TechyStarr/Blog)
+  Project link: [My_Blog](https://github.com/TechyStarr/Blog)
   
   I wrote about this project on [Hashnode](https://starr.hashnode.dev/create-a-beginner-friendly-blog-website-using-flask-a-python-framework#heading-connect-to-the-database-using-sqlmodel)
   
