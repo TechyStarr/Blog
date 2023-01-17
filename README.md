@@ -1,7 +1,7 @@
 # My_Blog
 Altschool second semester project
 
-# About My_Blog
+### About My_Blog
 This project is a blog website that lets users register and sign into their account. It also lets users create blog posts, publish these posts and while authenticated, they can easily edit or delete their posts at any time.
 
 ### Features I Implemented:
@@ -28,43 +28,48 @@ To get a local copy up and running, follow the steps below.
 1. Clone this repo
 
 
-  `git clone https://github.com/engrmarkk/Wallet_Platform.git`
+    `git clone https://github.com/engrmarkk/Wallet_Platform.git`
   
   
 1. Create a virtual environment
 
 
-  `python -m venv your_venv_name`
+    `python -m venv your_venv_name`
   
   
 1. Activate the virtual environment on powershell or cmd
 
 
-  `your_venv_name\Scripts\activate.bat`
+    `your_venv_name\Scripts\activate.bat`
   
   
 1. On Bash ('Scripts' for windows, 'bin' for linux)
 
   
-  `source your_venv_name/Scripts/activate.csh`
+    `source your_venv_name/Scripts/activate.csh`
   
   
 1. Install project dependencies
   
   
-  `pip install -r requirements.txt`
+    `pip install -r requirements.txt`
+    
+    
+   
+1. Run Flask 
+
   
-  
-1.Run Flask
-  
-  
-  `flask run`
+    `flask run`
   
   
 1. Open the link generated in the terminal on a browser
-
-
-  `http://127.0.0.1:5000/`
+  
+  
+    `http://127.0.0.1:5000/`
+  
+  
+      
+      
   
   ### Contact
   Calista Ifenkwe Twitter - twitter.com/_StarrSzn [<i class="fa-brands fa-twitter"></i>]("twitter.com/_StarrSzn")   calistaifenkwe@gmail.com
