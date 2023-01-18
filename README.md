@@ -1,12 +1,19 @@
 # My_Blog
 Altschool second semester project
 
+----
+
 ### About My_Blog
+
 This project is a blog website that lets users register and sign into their account. It also lets users create blog posts, publish these posts and while authenticated, they can easily edit or delete their posts at any time.
+
+----
 
 ### Features I Implemented:
 * Authentication(User registration and log In)
-
+* Create and publish new articles
+* Edit and delete articles
+----
 
 ### Working on this project exposed me to:
 * Jinja2 Templates
@@ -15,14 +22,18 @@ This project is a blog website that lets users register and sign into their acco
 * User Authentication using flask
 * Flask Debugging
 
+----
+
 ## Usage 
 To get a local copy up and running, follow the steps below.
+
 
 ### Prerequisites
 
 * [python 3](https://www.python.org/downloads/)
 * Code Editors: I used [Vs code](https://code.visualstudio.com/) for this project
 * Bash Terminal: Git bash, powershell
+
 
 ### Installation
 1. Clone this repo
@@ -68,7 +79,8 @@ To get a local copy up and running, follow the steps below.
     `http://127.0.0.1:5000/`
   
   
-      
+  
+----
       
   
   ### Contact
