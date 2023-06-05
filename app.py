@@ -5,7 +5,7 @@ from db import db
 import os
 from blogsite.resources.user import auth as UserBlueprint
 from blogsite.resources.article import article as ArticleBlueprint
-from blogsite.resources.views import aven as AvenBlueprint
+from blogsite.resources.aven import aven as AvenBlueprint
 
 
 
